@@ -1,0 +1,31 @@
+{
+  "name": "calculo_impostos",
+  "version": "1.0.0",
+  "description": "Aplicativo para calcular preço líquido e valor dos impostos",
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "Samuel Gregio de Lucca",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^8.2.5",
+    "electron-builder": "^22.6.1",
+    "electron-reload": "^1.5.0"
+  },
+  "dependencies": {},
+  "build": {
+    "appId": "calculo-impostos",
+    "win": {
+      "target": "portable",
+      "icon": "build/Logo_G.ico"
+    },
+    "portable": {
+      "unicode": false,
+      "artifactName": "Calculo-Impostos.exe"
+    }
+  }
+}

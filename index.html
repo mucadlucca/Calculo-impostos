@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cálculo de Impostos</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="./src/style/style.css" type="text/css">
+  </head>
+  <body>
+    <div class="main-header"> 
+    <h1 class="main-title">Cálculo de Impostos</h1>
+    <img src="./src/assets/Logo_Luft.png">
+    </div>
+    <div class="main-section">
+      <div class="column left">        
+        <form class="data" id="data" action="">
+          <div class="price">
+            <label for="price"><strong>Preço do Produto</strong>:</label><br>
+            <input type="text" id="price" name="price" placeholder="0.00"class="price money" 
+            required>
+          </div>
+          <div class="taxes-block">
+            <div class="taxes">
+              <label for="icmsTax"><span class="small">Aliq. </span><strong>ICMS</strong>:</label><br>
+              <input type="text" id="icmsTax" name="icmsTax" placeholder="0" required>
+              <span>%</span>
+            </div>
+            <div class="taxes">
+              <label for="ipiTax"><span class="small">Aliq. </span><strong>IPI</strong>:</label><br>
+              <input type="text" id="ipiTax" name="ipiTax" placeholder="0" required>
+              <span>%</span>
+            </div>
+          </div>
+          <div class="taxIncluded">
+            <label for="icmsTaxIncluded"><strong>ICMS </strong><span>incluso</span>:</label>
+            <select id="icmsTaxIncluded" class="taxSelect">
+              <option value="yes">Sim</option>
+              <option value="no">Não</option>         
+            </select><br>
+            <label for="ipiTaxIncluded"><strong>IPI </strong><span>incluso</span>:</label>
+            <select id="ipiTaxIncluded" class="taxSelect">
+              <option value="yes">Sim</option>
+              <option value="no">Não</option>         
+            </select>
+          </div>
+          <div class="button">
+            <button id="button" type="button" onclick="selecionarCalculo()">Calcular</button>
+            <button id="reset" type="reset" onclick="clearResults()">Limpar</button>
+          </div>
+        </form>
+      </div>
+      <div class="column right hidden">
+        <h2 class="simple-title">Preços Calculados:</h2>
+        <div class="results">
+          <p class="label">Preço líquido (sem impostos):</p>
+          <p class="values" id="liquidPrice">R$0</p>
+          <p class="label">Preço c/ Impostos (Base ICMS):</p>
+          <p class="values" id="icmsBase">R$0</p>
+          <p class="label">Valor ICMS:</p>
+          <p class="values" id="icmsValue">R$0</p>
+          <p class="label">Preço c/ ICMS (Base IPI):</p>
+          <p class="values" id="ipiBase">R$0</p>
+          <p class="label">Valor IPI:</p>
+          <p class="values" id="ipiValue">R$0</p>
+        </div>        
+      </div>
+    </div>      
+    <script type="text/javascript" src="./src/scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="./src/scripts/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="./src/scripts/mask.js"></script> 
+    <script type="text/javascript" src="./src/scripts/script.js"></script>    
+  </body>
+</html>
