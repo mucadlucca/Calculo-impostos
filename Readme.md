@@ -30,17 +30,17 @@ A aplicação permite calcular os valores dos impostos, assim como, os valores b
 
 Este projeto foi desenvolvido utilizando as tecnologias abaixo:
 
-- [HTML][HTML]
-- [CSS][CSS]
-- [JavaScript][javascript]
-- [Zepto][zeptojs]
-- [jQuery Mask Plugin][jQuery Mask Plugin]
-- [Electron][electronjs]
+- HTML
+- CSS
+- JavaScript
+- [Zepto](https://zeptojs.com/)
+- [jQuery Mask Plugin](https://igorescobar.github.io/jQuery-Mask-Plugin/)
+- [Electron](https://www.electronjs.org/)
 
 
 ## :information_source: Como Usar
 
-Para clonar e rodar esta aplicação, você irá precisar [Git](https://git-scm.com) e [Yarn][yarn] instalado no seu computador.
+Para clonar e rodar esta aplicação, você irá precisar [Git](https://git-scm.com) e [Yarn](https://yarnpkg.com/) instalado no seu computador.
 
 Pela sua linha de comando:
 
