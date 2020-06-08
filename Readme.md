@@ -61,6 +61,17 @@ $ yarn start
 
 ```
 
+### Gerando o executável do Windows .exe
+
+Note que o sistema utilizado na minha empresa é o Windows, por este motivo, o "build" da aplicação está configurado para gerar um executável .exe portátil, ou seja, que não necessita de instalação no sistema operacional.
+
+```bash
+# Build the application
+$ yarn dist
+
+```
+
+
 ## Como Contribuir
 
 - Faça um "fork";
