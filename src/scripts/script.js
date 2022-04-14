@@ -24,11 +24,19 @@ function selecionarCalculo() {
   }
 }
 
-function calcularImpostoICMSeIPI() {
+let price;
+
+function priceReplaceComma() {
   let priceComma = document.forms["data"]["price"].value;
-  let price = priceComma.replace(/,/g, "") * 1;
+  price = priceComma.replace(/\./g, "").replace(/,/g, ".") * 1;
+  return price
+}
+
+function calcularImpostoICMSeIPI() {
+  priceReplaceComma()  
   let icms = document.forms["data"]["icmsTax"].value * 1;
-  let ipi = document.forms["data"]["ipiTax"].value * 1;
+  let ipi = document.forms["data"]["ipiTax"].value;
+  ipi = ipi.replace(/,/g, ".") * 1;
 
   let icmsValue = price * (icms / 100);
   let ipiValue = price - (price / (1 + (ipi / 100)));
@@ -42,10 +50,10 @@ function calcularImpostoICMSeIPI() {
 }
 
 function calcularImpostoICMS() {
-  let priceComma = document.forms["data"]["price"].value;
-  let price = priceComma.replace(/,/g, "") * 1;
+  priceReplaceComma()
   let icms = document.forms["data"]["icmsTax"].value * 1;
-  let ipi = document.forms["data"]["ipiTax"].value * 1;
+  let ipi = document.forms["data"]["ipiTax"].value;
+  ipi = ipi.replace(/,/g, ".") * 1;
 
   let icmsValue = (price * (1 + (ipi / 100))) * (icms / 100);
   let ipiValue = (price * (1 + (ipi /100))) - price;
@@ -59,10 +67,10 @@ function calcularImpostoICMS() {
 }
 
 function calcularImposto() {
-  let priceComma = document.forms["data"]["price"].value;
-  let price = priceComma.replace(/,/g, "") * 1;
+  priceReplaceComma()
   let icms = document.forms["data"]["icmsTax"].value * 1;
-  let ipi = document.forms["data"]["ipiTax"].value * 1;
+  let ipi = document.forms["data"]["ipiTax"].value;
+  ipi = ipi.replace(/,/g, ".") * 1;
 
   let ipiBase = (price / (1 - ((icms / 100) * (1 + (ipi / 100)))));
 
