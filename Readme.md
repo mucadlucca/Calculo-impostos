@@ -33,7 +33,7 @@ Este projeto foi desenvolvido utilizando as tecnologias abaixo:
 - HTML
 - CSS
 - JavaScript
-- [Zepto](https://zeptojs.com/)
+- [jQuery](https://jquery.com/)
 - [jQuery Mask Plugin](https://igorescobar.github.io/jQuery-Mask-Plugin/)
 - [Electron](https://www.electronjs.org/)
 

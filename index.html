@@ -5,6 +5,7 @@
     <title>Cálculo de Impostos</title>
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="./src/style/reset.css" type="text/css">
     <link rel="stylesheet" href="./src/style/style.css" type="text/css">
   </head>
   <body>
@@ -17,13 +18,19 @@
         <form class="data" id="data" action="">
           <div class="price">
             <label for="price"><strong>Preço do Produto</strong>:</label><br>
-            <input type="text" id="price" name="price" placeholder="0.00"class="price money" 
+            <input type="text" id="price" name="price" placeholder="0,00" class="price money" 
             required>
           </div>
           <div class="taxes-block">
             <div class="taxes">
               <label for="icmsTax"><span class="small">Aliq. </span><strong>ICMS</strong>:</label><br>
-              <input type="text" id="icmsTax" name="icmsTax" placeholder="0" required>
+              <select id="icmsTax" class="taxSelect">
+                <option value="4">4</option>
+                <option value="7">7</option> 
+                <option value="12">12</option>          
+                <option value="18">18</option>
+              </select>
+              <!-- <input type="text" id="icmsTax" name="icmsTax" placeholder="0" required> -->
               <span>%</span>
             </div>
             <div class="taxes">
@@ -66,7 +73,7 @@
         </div>        
       </div>
     </div>      
-    <script type="text/javascript" src="./src/scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="./src/scripts/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="./src/scripts/jquery.mask.min.js"></script>
     <script type="text/javascript" src="./src/scripts/mask.js"></script> 
     <script type="text/javascript" src="./src/scripts/script.js"></script>    
