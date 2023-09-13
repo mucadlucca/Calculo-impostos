@@ -75,7 +75,7 @@ $ yarn dist
 ## Como Contribuir
 
 - Faça um "fork";
-- Crie uma nova "branck" com seu novo recurso: `git checkout -b my-feature`;
+- Crie uma nova "branch" com seu novo recurso: `git checkout -b my-feature`;
 - "Commit" suas modificações: `git commit -m 'feat: My new feature'`;
 - faça um "push" da sua "branch": `git push origin my-feature`.
 
